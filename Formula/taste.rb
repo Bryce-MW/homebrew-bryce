@@ -1,4 +1,4 @@
-class Paste < Formula
+class Taste < Formula
   desc "Simple command to view and retrieve the clipboard in multiple formats"
   homepage "https://github.com/Bryce-MW/taste"
   url "https://github.com/Bryce-MW/taste/archive/refs/tags/20220429073313.tar.gz"
