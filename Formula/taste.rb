@@ -11,7 +11,7 @@ class Taste < Formula
     system ENV.cc, "taste.m", "-framework", "AppKit", "-framework", "CoreFoundation", "-o", "taste", "-O3"
     # The C version of taste
     # system ENV.cc, "taste.c", "-fuse-ld=lld", "-framework", "AppKit", "-framework", "CoreFoundation",
-    #   "-o", "taste", "-O3"
+    #  "-o", "taste", "-O3"
     bin.install "taste"
   end
 
