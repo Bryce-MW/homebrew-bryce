@@ -7,6 +7,12 @@ class Taste < Formula
   license "BSD-3-Clause"
   head "https://github.com/Bryce-MW/taste.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/bryce-mw/bryce"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur: "957068b7d71414998f4dbcb706e15e1bb86057fdfbfef2889254be4473fd847f"
+  end
+
   def install
     system ENV.cc, "taste.m", "-framework", "AppKit", "-framework", "CoreFoundation", "-o", "taste", "-O3"
     # The C version of taste
