@@ -1,4 +1,4 @@
-# Bryce-MW Bryce
+# Bryce's Programs
 
 ## How do I install these formulae?
 
