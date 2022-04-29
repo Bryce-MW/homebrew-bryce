@@ -1,16 +1,17 @@
 class Paste < Formula
   desc "Simple command to view and retrieve the clipboard in multiple formats"
-  homepage "https://github.com/Bryce-MW/paste"
+  homepage "https://github.com/Bryce-MW/taste"
+  url "https://github.com/Bryce-MW/taste/archive/refs/tags/20220429071648.tar.gz"
   version "0.1.1"
-  license "BSD-3-Clause"
-  url "https://github.com/Bryce-MW/paste/archive/refs/tags/20220429071648.tar.gz"
   sha256 "b28b3f31799e76cf61b4eb280e5263c3aac537c990d7036e0cba58de3ee42315"
-  head "https://github.com/Bryce-MW/paste.git", branch: "main"
+  license "BSD-3-Clause"
+  head "https://github.com/Bryce-MW/taste.git", branch: "main"
 
   def install
-    system ENV.cc, "paste.m", "-framework", "AppKit", "-framework", "CoreFoundation", "-o", "taste", "-O3"
+    system ENV.cc, "taste.m", "-framework", "AppKit", "-framework", "CoreFoundation", "-o", "taste", "-O3"
     # The C version of taste
-    # system ENV.cc, "paste.c", "-fuse-ld=lld", "-framework", "AppKit", "-framework", "CoreFoundation", "-o", "taste", "-O3"
+    # system ENV.cc, "taste.c", "-fuse-ld=lld", "-framework", "AppKit", "-framework", "CoreFoundation",
+    #  "-o", "taste", "-O3"
     bin.install "taste"
   end
 
