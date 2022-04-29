@@ -1,9 +1,9 @@
 class Paste < Formula
   desc "Simple command to view and retrieve the clipboard in multiple formats"
   homepage "https://github.com/Bryce-MW/taste"
-  url "https://github.com/Bryce-MW/taste/archive/refs/tags/20220429071648.tar.gz"
-  version "0.1.1"
-  sha256 "b28b3f31799e76cf61b4eb280e5263c3aac537c990d7036e0cba58de3ee42315"
+  url "https://github.com/Bryce-MW/taste/archive/refs/tags/20220429073313.tar.gz"
+  version "0.1.2"
+  sha256 "7554e9eea27c4561801c1a8ea2765ae249cac3d41fe7fe2bb32a07995f7c74b3"
   license "BSD-3-Clause"
   head "https://github.com/Bryce-MW/taste.git", branch: "main"
 
