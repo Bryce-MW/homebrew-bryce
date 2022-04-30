@@ -8,8 +8,7 @@ class Taste < Formula
 
   bottle do
     root_url "https://ghcr.io/v2/bryce-mw/bryce"
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, big_sur: "957068b7d71414998f4dbcb706e15e1bb86057fdfbfef2889254be4473fd847f"
+    sha256 cellar: :any_skip_relocation, big_sur: "3bcecf4b4526987fc5de0093fce4ec4a01da5b2e5fdc81a678c3dbceda5cbd87"
   end
 
   def install

@@ -1,0 +1,37 @@
+name: Bump formulae on schedule or request
+
+on:
+  workflow_dispatch:
+    inputs:
+      formulae:
+        description: Custom list of formulae to livecheck and bump if outdated
+        required: false
+  schedule:
+    # Every day at 5am
+    - cron: '0 5 * * *'
+
+env:
+  FORMULAE: >
+    Bryce-MW/bryce/taste
+
+jobs:
+  autobump:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/homebrew/ubuntu16.04:master
+    steps:
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Configure Git user
+        uses: Homebrew/actions/git-user-config@master
+        with:
+          username: ${{ (github.event_name == 'workflow_dispatch' && github.actor) || 'Bryce-MW' }}
+
+      - name: Bump formulae
+        uses: Homebrew/actions/bump-formulae@master
+        continue-on-error: true
+        with:
+          token: ${{ github.token }}
+          formulae: ${{ github.event.inputs.formulae || env.FORMULAE }}
